@@ -17,6 +17,8 @@ def cleanData(string):
 
 def main():
     files = ["largestRats.txt", "meanRats.txt", "smallestRats.txt"]
+    outputFile = "RatGrowth.png"
+    print(f"Creating a graph using {', '.join(files)}...")
     for i in files:
         try:
             i = readFile(i)
@@ -35,7 +37,9 @@ def main():
         plt.ylabel("Weight (grams)")
 
         plt.legend(files)
-    plt.savefig("RatGrowth.png")
+    plt.savefig(outputFile)
+
+    print(f"Done! Ouputted results into {outputFile}")
 
 
 if __name__ == "__main__":
