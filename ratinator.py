@@ -5,7 +5,7 @@ class Rat:
         self.litters = 0
 
     def __str__(self):
-        return f"{self.weight}{self.sex}"
+        return f"{self.weight}"
 
     def __repr__(self):
         return f"{self.weight}{self.sex}"
