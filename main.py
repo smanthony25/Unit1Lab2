@@ -11,8 +11,9 @@ def readFile(filename):
     return contents
 
 
-def cleanData(string):
-    return string.split("\n")
+def cleanData(data):
+    cleanedData = [int(weight) for weight in data.split('\n')]
+    return cleanedData
 
 
 def main():
@@ -29,7 +30,6 @@ def main():
             continue
 
         i = cleanData(i)
-        i = [int(size) for size in i]
         plt.plot(i)
 
         plt.title("Rat Growth")
